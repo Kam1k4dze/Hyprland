@@ -2,6 +2,7 @@
 
 #include "defines.hpp"
 #include <cstring>
+#include <cstring>
 
 template <uint16_t N>
 class CMaxLengthCString {
