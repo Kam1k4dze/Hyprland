@@ -1769,11 +1769,10 @@ SDispatchResult CKeybindManager::changeGroupActive(std::string args) {
         return {};
     }
 
-    if (args != "b" && args != "prev") {
+    if (args != "b" && args != "prev")
         PWINDOW->setGroupCurrent(PWINDOW->m_groupData.pNextWindow.lock());
-    } else {
+    else
         PWINDOW->setGroupCurrent(PWINDOW->getGroupPrevious());
-    }
 
     return {};
 }
@@ -3328,7 +3327,7 @@ SDispatchResult CKeybindManager::setProp(std::string args) {
         g_pCompositor->focusWindow(PLASTWINDOW);
     }
 
-    if (PROP == "novrr")
+    if (PROP == "no_vrr")
         g_pConfigManager->ensureVRR(PWINDOW->m_monitor.lock());
 
     for (auto const& m : g_pCompositor->m_monitors)
